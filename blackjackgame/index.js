@@ -9,6 +9,13 @@ let messageEl = document.querySelector("#message-el")
 let sumCards = document.querySelector("#sum-cards")
 let cardEl = document.querySelector("#card-el")
 
+let player = {
+ name: "Aqsa",
+ chips: 145
+}
+
+let playerEl = document.getElementById("player-el")
+playerEl.textContent = player.name + ": $" + player.chips
 
 
 function getRandomNum () {
@@ -50,14 +57,13 @@ function renderGame  () {
     }
     sumCards.innerText = `sum: ${sum}`
 }
-function newCard  () {
-    let card = getRandomNum()
-    sum += card
-    // Push the card to the cards array
-    cards.push(card)
-    console.log(cards)
-    
-    renderGame()
-   
+function newCard() {
+    // Only allow the player to get a new card if she IS alive and does NOT have Blackjack
+    if (isAlive === true && hasBlackJack === false) {
+        let card = getRandomNum()
+        sum += card
+        cards.push(card)
+        renderGame()        
+    }
 
 }
