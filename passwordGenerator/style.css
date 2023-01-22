@@ -1,0 +1,31 @@
+body{
+    background-color: black;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+h1{
+    color: green;
+    margin-bottom: 20px;
+}
+#code-generate{
+    border: 1px solid grey;
+    width: 400px;
+    border-radius: 20px;
+    text-align: center;
+    padding: 20px;
+    font-size: 1rem;
+}
+button{
+    background-color: green;
+    border-radius: 10px;
+    color: white;
+    margin-top: 20px;
+    padding: 5px;
+}
